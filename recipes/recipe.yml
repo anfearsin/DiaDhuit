@@ -33,7 +33,7 @@ modules:
         # Core apps
         - uupd
         - brave-browser
-        - steam-devices    #swap for steam if flatpak causes issues
+       # - steam-devices    #swap for steam if flatpak causes issues
         - yakuake
         - https://bitwarden.com/download/?app=desktop&platform=linux&variant=rpm
         - fastfetch
@@ -42,6 +42,7 @@ modules:
         - okular
         - starship
         - gnome-boxes
+        - steam
        
         # Gaming stack
        # - gamescope
@@ -89,7 +90,7 @@ modules:
          # - org.gnome.Boxes
           - com.github.k4zmu2a.spacecadetpinball
           - com.github.tchx84.Flatseal
-          - com.valvesoftware.Steam
+         # - com.valvesoftware.Steam
           - de.haeckerfelix.Shortwave
          # - app.grayjay.Grayjay
           - org.onlyoffice.desktopeditors
@@ -100,6 +101,12 @@ modules:
           - org.gnome.Calculator
          # - com.github.KRTirtho.Spotube
          # - com.stremio.Stremio
+
+  - type: brew
+    nofile-limits: true # increase nofile limits
+    brew-analytics: false # disable telemetry
+    auto-update: false # the brew binary- handled by UUPD
+    auto-upgrade: false # brew packages- handled by UUPD
 
   - type: systemd
     system:
