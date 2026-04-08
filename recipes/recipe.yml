@@ -45,7 +45,7 @@ modules:
         - steam
        
         # Gaming stack
-       # - gamescope
+        - gamescope
        # - gamemode
        # - mangohud
        # - goverlay
