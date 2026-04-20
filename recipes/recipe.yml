@@ -20,11 +20,10 @@ modules:
   - type: dnf
     repos:
       files:
-        - https://brave-browser-rpm-release.s3.brave.com/brave-browser.repo
+        - https://brave-browser-rpm-beta.s3.brave.com/brave-browser-beta.repo
       copr:
         - atim/starship
         - ublue-os/packages
-       # - bieszczaders/kernel-cachyos
       keys:
         - https://brave-browser-rpm-release.s3.brave.com/brave-core.asc
       nonfree: negativo17 # OR rpmfusion
@@ -32,8 +31,8 @@ modules:
       packages:
         # Core apps
         - uupd
-        - brave-browser
-       # - steam-devices    #swap for steam if flatpak causes issues
+        - brave-origin-beta
+       # - steam-devices
         - yakuake
         - https://bitwarden.com/download/?app=desktop&platform=linux&variant=rpm
         - fastfetch
@@ -51,11 +50,7 @@ modules:
        # - goverlay
        # - vulkan-tools
        # - mesa-vulkan-drivers
-        # CachyOS kernel
-       # - kernel-cachyos
-       # - kernel-cachyos-core
-       # - kernel-cachyos-modules
-       # - kernel-cachyos-devel-matched
+       
     remove:
       packages:
         # example: removing firefox
