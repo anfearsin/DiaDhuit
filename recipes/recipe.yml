@@ -42,6 +42,7 @@ modules:
         - starship
         - gnome-boxes
         - steam
+        - mpv
        
         # Gaming stack
         - gamescope
