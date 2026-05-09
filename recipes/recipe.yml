@@ -7,7 +7,7 @@ description: A custom image for friends and family.
 
 # the base image to build on top of (FROM) and the version tag to use
 base-image: ghcr.io/blue-build/base-images/fedora-kinoite
-image-version: 43 # latest is also supported if you want new updates ASAP
+image-version: latest # latest is also supported if you want new updates ASAP
 
 # module configuration, executed in order
 # you can include multiple instances of the same module
@@ -26,7 +26,7 @@ modules:
         - ublue-os/packages
       keys:
         - https://brave-browser-rpm-release.s3.brave.com/brave-core.asc
-      nonfree: negativo17 # OR rpmfusion
+      nonfree: rpmfusion # OR negativo17
     install:
       packages:
         # Core apps
